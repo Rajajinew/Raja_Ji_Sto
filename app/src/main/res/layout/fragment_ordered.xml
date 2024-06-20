@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#0A1450"
+    android:textAlignment="center"
+    tools:context=".DetailActivity">
+
+<ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+
+       <TextView
+           android:id="@+id/companyName"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="8dp"
+           android:text="Company Name"
+           android:textColor="@color/white"
+           android:textSize="25sp"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent" />
+
+       <ImageView
+           android:id="@+id/Image"
+           android:layout_width="318dp"
+           android:layout_height="211dp"
+           android:layout_marginTop="10dp"
+           android:scaleType="centerCrop"
+           android:src="@drawable/banner1"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/companyName" />
+
+       <TextView
+           android:id="@+id/Address"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="10dp"
+           android:layout_marginTop="12dp"
+           android:text="Adress"
+           android:textColor="@color/white"
+           android:textSize="21sp"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/Image" />
+
+       <TextView
+           android:id="@+id/Price"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="10dp"
+           android:text="Price"
+           android:textColor="@color/white"
+           android:textSize="25sp"
+           app:layout_constraintStart_toStartOf="@+id/Address"
+           app:layout_constraintTop_toBottomOf="@+id/Address" />
+
+       <TextView
+           android:id="@+id/textView18"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="14dp"
+           android:text="Enter Your Detail"
+           android:textColor="@color/white"
+           android:textSize="21sp"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/Price" />
+
+       <EditText
+           android:id="@+id/nameofuser"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="30dp"
+           android:layout_marginTop="8dp"
+           android:drawableLeft="@drawable/user_01"
+           android:drawablePadding="8dp"
+           android:ems="10"
+           android:textColor="@color/white"
+           android:textColorHint="@color/white"
+           android:hint="Enter your Name"
+           android:inputType="text"
+           android:textSize="20sp"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+       <EditText
+           android:id="@+id/addressofuser"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="9dp"
+           android:drawableLeft="@drawable/_5202520_location_pin"
+           android:drawablePadding="8dp"
+           android:ems="10"
+           android:textColor="@color/white"
+           android:textColorHint="@color/white"
+           android:hint="Enter Your Address"
+           android:inputType="text|textMultiLine"
+           android:textSize="20sp"
+           app:layout_constraintStart_toStartOf="@+id/nameofuser"
+           app:layout_constraintTop_toBottomOf="@+id/nameofuser" />
+
+       <EditText
+           android:id="@+id/contactofuser"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="9dp"
+           android:drawableLeft="@drawable/worker"
+           android:drawablePadding="8dp"
+           android:ems="10"
+           android:textColor="@color/white"
+           android:textColorHint="@color/white"
+           android:hint="Contact Number"
+           android:inputType="text|textPhonetic"
+           android:textSize="20sp"
+           app:layout_constraintStart_toStartOf="@+id/addressofuser"
+           app:layout_constraintTop_toBottomOf="@+id/addressofuser" />
+
+       <EditText
+           android:id="@+id/emailofuser"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:drawableLeft="@drawable/mail_02"
+           android:drawablePadding="8dp"
+           android:ems="10"
+           android:textColor="@color/white"
+           android:textColorHint="@color/white"
+           android:hint=" Enter Email Address"
+           android:inputType="text|textEmailAddress"
+           android:textSize="20sp"
+           app:layout_constraintStart_toStartOf="@+id/contactofuser"
+           app:layout_constraintTop_toBottomOf="@+id/contactofuser" />
+
+       <androidx.appcompat.widget.AppCompatButton
+           android:id="@+id/btnSelectDate"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="10dp"
+           android:layout_marginTop="10dp"
+           android:background="@android:color/transparent"
+           android:drawableLeft="@drawable/_356272_3892121"
+           android:drawablePadding="4dp"
+           android:text="Select Date"
+           android:textAllCaps="false"
+           android:textColor="@color/white"
+           android:textSize="20sp"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/emailofuser" />
+
+       <TextView
+           android:id="@+id/tvSelectedDate"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="15dp"
+           android:layout_marginTop="18dp"
+           android:layout_marginEnd="7dp"
+           android:inputType="text|textMultiLine"
+           android:text="TextView"
+           android:textAlignment="center"
+           android:textColor="@color/white"
+           android:textSize="20sp"
+           app:layout_constraintBottom_toBottomOf="@+id/btnSelectDate"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintHorizontal_bias="0.529"
+           app:layout_constraintStart_toEndOf="@+id/btnSelectDate"
+           app:layout_constraintTop_toTopOf="@+id/btnSelectDate" />
+
+       <TextView
+           android:id="@+id/textView17"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="10dp"
+           android:inputType="textMultiLine"
+           android:text=" > deleviery charge is 35 Rupees/KM
+    \n > if you do full payement , 5% off
+    \n > if you cancel then 4% deducted
+    "
+           android:textColor="@color/white"
+           android:textSize="20sp"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/btnSelectDate" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/order"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="10dp"
+                android:background="#7AE2D1"
+                android:text="Order"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView17" />
+   </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A1450"
+    tools:context=".HotelActivity">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="380dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="8dp"
+        android:drawableLeft="@drawable/hotell"
+        android:drawablePadding="26dp"
+        android:elevation="5dp"
+        android:paddingLeft="48dp"
+        android:text="Hotel"
+        android:textColor="#E8CB35"
+        android:textSize="37sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toEndOf="@+id/backbutton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="393dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="#8ACFAD"
+        android:gravity="left"
+        android:iconifiedByDefault="false"
+        android:paddingLeft="5dp"
+        android:queryBackground="@android:color/transparent"
+        android:queryHint="search acording to you"
+        android:scrollIndicators="left"
+        android:searchIcon="@drawable/icon__22_"
+        app:circularflow_defaultRadius="12dp"
+        app:circularflow_radiusInDP="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchView"
+        tools:listitem="@layout/banditem" />
+
+    <ImageButton
+        android:id="@+id/backbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icon" />
+</androidx.constraintlayout.widget.ConstraintLayout>

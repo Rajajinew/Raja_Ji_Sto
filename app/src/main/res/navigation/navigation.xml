@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/likeFragment">
+
+    <fragment
+        android:id="@+id/likeFragment"
+        android:name="com.example.raja_ji_store.fragment.likeFragment"
+        android:label="fragment_like"
+        tools:layout="@layout/fragment_like" />
+    <fragment
+        android:id="@+id/orderedFragment"
+        android:name="com.example.raja_ji_store.fragment.OrderedFragment"
+        android:label="fragment_ordered"
+        tools:layout="@layout/fragment_ordered" />
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.example.raja_ji_store.fragment.notificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.raja_ji_store.fragment.profileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.raja_ji_store.fragment.historyFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
+</navigation>

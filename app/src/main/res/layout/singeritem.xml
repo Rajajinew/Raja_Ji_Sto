@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="188dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="8dp"
+        android:outlineSpotShadowColor="@color/elevationcolor"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/singerpicimage"
+                android:layout_width="110dp"
+                android:layout_height="125dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/k"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/singername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="9dp"
+                android:text="Company name"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                app:layout_constraintStart_toEndOf="@+id/singerpicimage"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/SingerAdress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:inputType="textMultiLine"
+                android:text="Adress of company"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                app:autoSizeMaxTextSize="29sp"
+                app:autoSizeMinTextSize="22sp"
+                app:layout_constraintStart_toStartOf="@+id/singername"
+                app:layout_constraintTop_toBottomOf="@+id/singername" />
+
+            <TextView
+                android:id="@+id/singerpricee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="23287"
+                android:textColor="@color/black"
+                android:textSize="32sp"
+                app:layout_constraintBottom_toTopOf="@+id/singerratting"
+                app:layout_constraintStart_toStartOf="@+id/SingerAdress"
+                app:layout_constraintTop_toBottomOf="@+id/SingerAdress" />
+
+            <TextView
+                android:id="@+id/singerratting"
+                android:layout_width="126dp"
+                android:layout_height="42dp"
+                android:layout_marginBottom="9dp"
+                android:text="*****"
+                android:textColor="#FFEB3B"
+                android:textSize="50sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/singerpricee" />
+
+            <ImageButton
+                android:id="@+id/singerlikebutton"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="12dp"
+                android:background="@android:color/transparent"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/singerratting"
+                app:layout_constraintTop_toBottomOf="@+id/SingerAdress"
+                app:srcCompat="@drawable/heart" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
